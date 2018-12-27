@@ -1,0 +1,39 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <color name="header_color">#295FE1</color>
+    <color name="subheader_color">#70CBFF</color>
+    <color name="selected_color">#EBBF10</color>
+    <color name="nav_drawer_color">#2d2d2d</color>
+    <color name="subtext_color">#bcbcbc</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="background_alt_color">#9EAEFF</color>
+    <color name="edittext_alt_color">#06144F</color>
+    <color name="price_color">#207D36</color>
+    <color name="time_color">#337CC4</color>
+    <color name="sort_selected">#295FE1</color>
+    <color name="sort_deselect">#999999</color>
+    <color name="green">#0FD116</color>
+    <color name="green_pressed">#38BA82</color>
+    <color name="itin_color">#828282</color>
+    
+    
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    
+    </style>
+
+</resources>

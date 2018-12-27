@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="welcome_text">Welcome</string>
+    <string name="header_search_flights_text">Search Flights</string>
+    <string name="title1">Search Flights</string>
+    <string name="app_name">AndroidProject</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="user_name">Email Address</string>
+    <string name="first_last_name">FirstName LastName</string>
+    <string name="pass_word">Password</string>
+    <string name="single_name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="address">Address</string>
+    <string name="cc_number">Credit Card Number</string>
+    
+    <string name="date_day">DD</string>
+    <string name="date_month">MM</string>
+    <string name="date_year">YYYY</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="account_header_text">Account</string>
+    <string name="userinformation_text">User information</string> 
+    <string name="button_new_user">Submit</string>
+    <string name="button_login">Log In</string>
+    <string name="login_text">Please enter your login information:</string>
+    <string name="new_acc">Create a new account</string>
+    <string name="logo_image">Logo Image</string>
+    <string name="title_activity_client_options">Client Options</string>
+    <string name="title_activity_admin_options">Admin Options</string>
+    
+    <string name="book_flight_text">Book a flight</string>
+    <string name="from_text">From</string>
+    <string name="to_text">To</string>
+    <string name="city_or_location">City or Location</string>
+    <string name="date_text">Departure date</string>
+    <string name="date_format_edittext">DD-MM-YYYY</string>
+    <string name="num_box">1</string>
+    <string name="plus_box">+</string>
+    <string name="minus_box">-</string>
+    <string name="num_person">How many people?</string>
+    
+    <string name="title_activity_results">Results</string>
+    <string name="search_button">Search</string>
+    <string name="radio_single_flights">Search single flights</string>
+    <string name="radio_itineraries">Search all itineraries</string>
+    <string name="title_activity_user_info_page">UserInfoPage</string>
+    <string name="user_info_button">User info</string>
+    <string name="flights_checkbox">Non-stop flights only</string>
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+    <string name="upload_clients_file">Upload Clients File</string>
+    <string name="upload_flights_file">Upload Flights File</string>
+    <string name="edit_client_info">Edit Client Info</string>
+    <string name="update_flight_info">Update Flight</string>
+    <string name="client_email_need">Client Email</string>
+    
+    <string name="flight_number">Flight Number</string>
+    <string name="airline_text">Airline</string>
+    <string name="origin_text">Origin</string>
+    <string name="destination_text">Destination</string>
+    <string name="departure_dt">Departure Date/Time</string>
+    <string name="arrival_dt">Arrival Date/Time</string>
+    <string name="price_flight_text">Price</string>
+    <string name="numseat_flight_text">Number of Seats</string>
+    <string name="log_out_text">Log Out</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="submit_changes_text">Submit Changes</string>
+
+    <string-array name="nav_client_ops">
+        <item>Account</item>
+        <item>Search Flights</item>
+        <item>My Booked Flights</item>
+        <item>Logout</item>
+    </string-array>
+
+    <array name="nav_icons">
+        <item>@drawable/ic_action_person</item>
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_airplane_mode_off</item>
+        <item>@drawable/ic_action_remove</item>
+    </array>
+    
+    <string name="show_booked_flight_itin">Showing booked flight itineraries</string>
+    <string name="view_bookings_header">View Bookings</string>
+    
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_test">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="title_activity_new_user">NewUserActivity</string>
+    <string name="title_activity_display_result">DisplayResultActivity</string>
+    <string name="sorttime_string">Sort by time</string>
+    <string name="sortcost_string">Sort by cost</string>
+    <string name="no_result">No results found. Please try another search.</string>
+    <string name="title_activity_view_bookings">ViewBookings</string>
+    <string name="title_activity_update_flight">UpdateFlightActivity</string>
+    
+	<string name="book_header_text">Book Flights</string>
+    <string name="view_itin_text">Viewing itinerary summary</string>
+    <string name="from_to_text">Location1 to Location2</string>
+    <string name="departing_text">Departing on: YYYY-MM-DD"</string>
+    <string name="total_cost_text">"Total Cost: "</string>
+    <string name="book_text">Book</string>
+    <string name="total_price_text">$0000.00</string>
+    <string name="single_price_text">$000.00</string>
+    <string name="itinerary_cost_text">""Itinerary Cost: "</string>
+    <string name="booking_numpeople_text">Booking for X person(s)</string>
+
+	<string name="show_flights_subheader">Showing flight results</string>
+	<string name="arrow_image">arrow image</string>
+	<string name="time_default">00:00</string>
+	<string name="divider">" | "</string>
+	<string name="divider_nospace">|</string>
+	<string name="price_big_text">$000.</string>
+	<string name="price_small_text">00</string>
+	<string name="result_time_text">0h 00m</string>
+	<string name="flight_type_text">Non-stop</string>
+	
+	<string name="flight_people_text">X Person(s)</string>
+	<string name="itin_num_text">Itinerary X</string>
+	<string name="depart_row_text">Depart</string>
+	<string name="arrive_row_text">Arrive</string>
+	<string name="time_date_format">HH:MM DD-MM-YYYY</string>
+	<string name="single_location_text">Location</string>
+	<string name="seats_left_text">X seat(s) left</string>
+	
+	<string name="create_acc_string_text">Create a new account</string>
+</resources>
