@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.flightapp.androidproject.Results" >
+
+    <FrameLayout 
+        android:id="@+id/bar_layout" 
+        android:layout_alignParentTop="true"
+        android:layout_height="@dimen/top_bar_length" 
+        android:layout_width="match_parent"
+        android:background="@color/header_color" >
+        
+        <Button
+            android:layout_marginTop="@dimen/menu_button_vert_margin"
+            android:layout_marginLeft="@dimen/menu_button_horiz_margin"
+            android:layout_width="@dimen/drop_menu_icon"
+            android:layout_height="@dimen/drop_menu_icon"
+            android:layout_gravity="left"
+            android:onClick="openCloseDrawer"
+            android:background="@drawable/menu_selector" />
+        
+        <TextView
+            android:id="@+id/bar_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/top_text_padding"
+            android:text="@string/book_header_text"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+    </FrameLayout>
+    
+    <LinearLayout 
+        android:id="@+id/header_layout" 
+        android:layout_below="@+id/bar_layout"
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/subheader_height"
+            android:background="@color/subheader_color"
+            android:text="@string/show_flights_subheader"
+            android:textColor="@color/header_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/subheader_padding"/>
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/no_result_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_layout"
+        android:layout_margin="@dimen/no_result_text_margin"
+        android:text="@string/no_result"
+        android:visibility="invisible"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <ScrollView
+        android:id="@+id/search_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header_layout" >
+        
+        
+    </ScrollView>
+    
+    <ListView
+        android:id="@+id/results_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer_bar"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/header_layout" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/footer_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/sort_switches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/sort_time_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sort_switch_height"
+                android:layout_weight="1"
+                android:checked="true"
+                android:background="@drawable/sort_selector"
+                android:button="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_action_alarms"
+                android:textSize="@dimen/sort_switch_text_size"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:onClick="onSortSwitchClick"
+                android:text="@string/sorttime_string"
+                android:paddingRight="@dimen/sort_switch_margin" />
+
+
+            <RadioButton
+                android:id="@+id/sort_cost_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sort_switch_height"
+                android:layout_weight="1"
+                android:background="@drawable/sort_selector"
+                android:button="@android:color/transparent"
+                android:drawableRight="@drawable/ic_action_dollar"
+                android:textSize="@dimen/sort_switch_text_size"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:onClick="onSortSwitchClick"
+                android:text="@string/sortcost_string"
+                android:paddingLeft="@dimen/sort_switch_margin" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</RelativeLayout>

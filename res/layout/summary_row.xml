@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/summary_airline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/airline_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/depart"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/summary_airline"
+        android:layout_marginLeft="16dp"
+        android:text="@string/depart_row_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+    
+    <TextView
+        android:id="@+id/depart_bar"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/depart"
+        android:layout_alignBaseline="@+id/depart"
+        android:text="@string/divider_nospace"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/arrive"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/depart"
+        android:layout_marginLeft="16dp"
+        android:text="@string/arrive_row_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+    
+        <TextView
+        android:id="@+id/arrive_bar"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/arrive"
+        android:layout_below="@+id/depart"
+        android:text="@string/divider_nospace"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/summary_flight_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/summary_airline"
+        android:text="@string/flight_number"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/summary_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/single_price_text"
+        android:layout_marginRight="16dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/sum_depart_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/depart_bar"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@+id/depart_bar"
+        android:text="@string/time_date_format"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/sum_arrive_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/arrive_bar"
+        android:layout_alignBottom="@+id/arrive_bar"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/summary_to"
+        android:text="@string/time_date_format"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/summary_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sum_arrive_date"
+        android:layout_alignBottom="@+id/sum_arrive_date"
+        android:layout_toRightOf="@+id/sum_depart_date"
+        android:text="@string/single_location_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/summary_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/summary_to"
+        android:layout_alignLeft="@+id/summary_to"
+        android:text="@string/single_location_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/summary_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/summary_price"
+        android:layout_below="@+id/summary_price"
+        android:text="@string/result_time_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/summary_num_seats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/summary_duration"
+        android:layout_below="@+id/summary_duration"
+        android:text="@string/seats_left_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" />
+    
+</RelativeLayout>

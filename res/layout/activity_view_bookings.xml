@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.flightapp.androidproject.ViewBookings" >
+
+    <FrameLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_length"
+        android:layout_alignParentTop="true"
+        android:background="@color/header_color" >
+
+        <Button
+            android:layout_width="@dimen/drop_menu_icon"
+            android:layout_height="@dimen/drop_menu_icon"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/menu_button_horiz_margin"
+            android:layout_marginTop="@dimen/menu_button_vert_margin"
+            android:background="@drawable/menu_selector"
+            android:onClick="openCloseDrawer" />
+
+        <TextView
+            android:id="@+id/bar_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingTop="@dimen/top_text_padding"
+            android:text="@string/view_bookings_header"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar_layout"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/subheader_height"
+            android:background="@color/subheader_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/subheader_padding"
+            android:text="@string/show_booked_flight_itin"
+            android:textColor="@color/header_color" />
+    </LinearLayout>
+    
+    <ExpandableListView
+        android:id="@+id/booking_expand_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_layout"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:indicatorLeft="0dp" >
+    </ExpandableListView>
+
+
+</RelativeLayout>

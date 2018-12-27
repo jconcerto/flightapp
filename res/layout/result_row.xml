@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/rr_from_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/time_color"
+        android:text="@string/time_default"
+        android:textSize="@dimen/result_row_text"
+        android:layout_marginLeft="@dimen/result_row_margin"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <ImageView
+        android:id="@+id/rr_arrow_image"
+        android:contentDescription="@string/arrow_image"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:paddingTop="5dp"
+        android:layout_toRightOf="@+id/rr_from_text"
+        android:src="@drawable/ic_action_forward" />
+
+    <TextView
+        android:id="@+id/rr_to_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rr_arrow_image"
+        android:text="@string/time_default"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/time_color"
+        android:textSize="@dimen/result_row_text" />
+
+    <TextView
+        android:id="@+id/rr_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rr_flight_type"
+        android:layout_alignBottom="@+id/rr_flight_type"
+        android:layout_toRightOf="@+id/rr_flight_type"
+        android:textSize="@dimen/result_row_subtext"
+        android:text="@string/divider"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/rr_price_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rr_price"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/rr_to_text"
+        android:layout_marginRight="@dimen/result_row_margin"
+        android:paddingBottom="5dp"
+        android:textColor="@color/price_color"
+        android:gravity="center"
+        android:text="@string/price_small_text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/result_row_price_min" />
+
+    <TextView
+        android:id="@+id/rr_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rr_duration"
+        android:layout_alignTop="@+id/rr_to_text"
+        android:layout_toLeftOf="@+id/rr_price_min"
+        android:textColor="@color/price_color"
+        android:gravity="center"
+        android:text="@string/price_big_text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/result_row_price" />
+
+    <TextView
+        android:id="@+id/rr_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_to_text"
+        android:layout_toRightOf="@+id/rr_divider"
+        android:text="@string/result_time_text"
+        android:textSize="@dimen/result_row_subtext"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/rr_flight_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rr_from_text"
+        android:layout_below="@+id/rr_from_text"
+        android:text="@string/flight_type_text"
+        android:textSize="@dimen/result_row_subtext"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+</RelativeLayout>

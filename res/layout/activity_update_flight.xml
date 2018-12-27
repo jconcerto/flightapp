@@ -1,0 +1,307 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <FrameLayout 
+        android:id="@+id/bar_layout" 
+        android:layout_alignParentTop="true"
+        android:layout_height="@dimen/top_bar_length" 
+        android:layout_width="match_parent"
+        android:background="@color/header_color" >
+        
+        
+        <TextView
+            android:id="@+id/bar_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/top_text_padding"
+            android:text="@string/update_flight_info"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+    </FrameLayout>
+    
+    <LinearLayout 
+        android:id="@+id/header_layout" 
+        android:layout_below="@+id/bar_layout"
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/subheader_height"
+            android:background="@color/subheader_color"
+            android:text=""
+            android:textColor="@color/header_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/subheader_padding"/>
+    </LinearLayout>
+    
+    <ScrollView
+        android:id="@+id/flight_scroll"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header_layout" >
+    
+    <LinearLayout 
+        android:id="@+id/flight_edit_layout" 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent"
+        android:orientation="vertical" 
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        
+        <LinearLayout 
+            android:id="@+id/flight_1" 
+            android:layout_height="wrap_content" 
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/ui_edittext_margin" >
+            
+            <TextView
+                android:id="@+id/flight_number_text"
+                android:gravity="center_vertical"
+                android:layout_width="@dimen/ui_textview_width"
+                android:layout_height="wrap_content"
+                android:text="@string/flight_number" />
+            
+            <EditText
+                android:id="@+id/flight_number_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ui_edittext_height"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:background="@drawable/edittext_selector"
+                android:hint="@string/flight_number"
+                android:paddingLeft="@dimen/ui_edittext_padding"
+                android:textSize="@dimen/ui_edittext_textsize" />
+        
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/flight_2" 
+            android:layout_height="wrap_content" 
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/ui_edittext_margin" >
+            
+            <TextView
+                android:id="@+id/flight_airlinetext"
+                android:gravity="center_vertical"
+                android:layout_width="@dimen/ui_textview_width"
+                android:layout_height="wrap_content"
+                android:text="@string/airline_text" />
+            
+            <EditText
+                android:id="@+id/flight_airline_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ui_edittext_height"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:background="@drawable/edittext_selector"
+                android:hint="@string/airline_text"
+                android:paddingLeft="@dimen/ui_edittext_padding"
+                android:textSize="@dimen/ui_edittext_textsize" />
+        
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/flight_3" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ui_edittext_margin" >
+            
+            <TextView
+                android:id="@+id/flight_fromtext"
+                android:gravity="center_vertical"
+                android:layout_width="@dimen/ui_textview_width"
+                android:layout_height="wrap_content"
+                android:text="@string/origin_text" />
+            
+            <EditText
+                android:id="@+id/flight_fromedit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ui_edittext_height"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/origin_text"
+                android:inputType="text"
+                android:background="@drawable/edittext_selector"
+                android:paddingLeft="@dimen/ui_edittext_padding"
+                android:textSize="@dimen/ui_edittext_textsize" />
+        
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/flight_4" 
+            android:layout_height="wrap_content" 
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/ui_edittext_margin" >
+            
+            <TextView
+                android:id="@+id/flight_desttext"
+                android:gravity="center_vertical"
+                android:layout_width="@dimen/ui_textview_width"
+                android:layout_height="wrap_content"
+                android:text="@string/destination_text" />
+            
+            <EditText
+                android:id="@+id/flight_destedit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ui_edittext_height"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:background="@drawable/edittext_selector"
+                android:hint="@string/destination_text"
+                android:paddingLeft="@dimen/ui_edittext_padding"
+                android:textSize="@dimen/ui_edittext_textsize" />
+        
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/flight_5" 
+            android:layout_height="wrap_content" 
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/ui_edittext_margin" >
+            
+            <TextView
+                android:id="@+id/flight_DepartTtext"
+                android:layout_width="@dimen/ui_textview_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="@string/departure_dt" />
+            
+            <EditText
+                android:id="@+id/flight_DepartTedit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ui_edittext_height"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:background="@drawable/edittext_selector"
+                android:hint="@string/departure_dt"
+                android:paddingLeft="@dimen/ui_edittext_padding"
+                android:textSize="@dimen/ui_edittext_textsize" />
+        
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/ui_edittext_margin" >
+            
+            <TextView
+                android:id="@+id/flight_arrivetext"
+                android:layout_width="@dimen/ui_textview_width"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/arrival_dt" />
+            
+            <EditText
+                android:id="@+id/flight_arriveedit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ui_edittext_height"
+                android:hint="@string/arrival_dt"
+                android:inputType="text"
+                android:background="@drawable/edittext_selector"
+                android:paddingLeft="@dimen/ui_edittext_padding"
+                android:textSize="@dimen/ui_edittext_textsize" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/ui_edittext_margin" >
+            
+            <TextView
+                android:id="@+id/flight_pricetext"
+                android:layout_width="@dimen/ui_textview_width"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/price_flight_text" />
+            
+            <EditText
+                android:id="@+id/flight_priceedit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ui_edittext_height"
+                android:background="@drawable/edittext_selector"
+                android:hint="@string/price_flight_text"
+                android:inputType="text|numberDecimal"
+                android:paddingLeft="@dimen/ui_edittext_padding"
+                android:textSize="@dimen/ui_edittext_textsize" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/ui_edittext_margin" >
+            
+            <TextView
+                android:id="@+id/flight_numseattext"
+                android:layout_width="@dimen/ui_textview_width"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/numseat_flight_text" />
+            
+            <EditText
+                android:id="@+id/flight_numseatedit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ui_edittext_height"
+                android:hint="@string/numseat_flight_text"
+                android:inputType="number"
+                android:background="@drawable/edittext_selector"
+                android:paddingLeft="@dimen/ui_edittext_padding"
+                android:textSize="@dimen/ui_edittext_textsize" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/ui_edittext_margin" >
+            
+            <Button
+                android:id="@+id/flight_cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_length"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/ui_edittext_smallmargin"
+                android:background="@drawable/button_selector"
+                android:textColor="@color/white"
+                android:text="@string/cancel_text"
+                android:onClick="cancelFlightInfo" />
+            <Button
+                android:id="@+id/flight_submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_length"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/ui_edittext_smallmargin"
+                android:background="@drawable/button_selector"
+                android:textColor="@color/white"
+                android:text="@string/submit_changes_text"
+                android:onClick="submitNewFlightInfo" />
+        </LinearLayout>
+        
+        </LinearLayout>
+        
+	</ScrollView>
+
+</RelativeLayout>

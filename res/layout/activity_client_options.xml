@@ -1,0 +1,262 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.flightapp.androidproject.ClientOptions"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+    
+    <FrameLayout 
+        android:id="@+id/bar_layout" 
+        android:layout_alignParentTop="true"
+        android:layout_height="@dimen/top_bar_length" 
+        android:layout_width="match_parent"
+        android:background="@color/header_color" >
+        
+        <Button
+            android:layout_marginTop="@dimen/menu_button_vert_margin"
+            android:layout_marginLeft="@dimen/menu_button_horiz_margin"
+            android:layout_width="@dimen/drop_menu_icon"
+            android:layout_height="@dimen/drop_menu_icon"
+            android:layout_gravity="left"
+            android:onClick="openCloseDrawer"
+            android:background="@drawable/menu_selector" />
+        
+        <TextView
+            android:id="@+id/bar_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/top_text_padding"
+            android:text="@string/welcome_text"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+    </FrameLayout>
+    
+    <LinearLayout 
+        android:id="@+id/header_layout" 
+        android:layout_below="@+id/bar_layout"
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/subheader_height"
+            android:background="@color/subheader_color"
+            android:text="@string/header_search_flights_text"
+            android:textColor="@color/header_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/subheader_padding"/>
+    </LinearLayout>
+    
+    <ScrollView
+        android:id="@+id/search_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header_layout" >
+			  
+               <LinearLayout
+                   android:id="@+id/linearLayout1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingBottom="@dimen/activity_vertical_margin"
+                   android:paddingLeft="@dimen/activity_horizontal_margin"
+                   android:paddingRight="@dimen/activity_horizontal_margin"
+                   android:paddingTop="@dimen/activity_vertical_margin"
+                   android:orientation="vertical" >
+
+			   <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:background="@color/background_alt_color"
+			        android:layout_marginBottom="@dimen/edittext_margin" >
+			
+			        <TextView
+			            android:id="@+id/fromText"
+			            android:layout_width="150dp"
+			            android:layout_height="match_parent"
+			            android:layout_weight="1"
+			            android:textColor="@color/edittext_alt_color"
+			            android:textSize="@dimen/page_text_size"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="10dp"
+			            android:text="@string/from_text" />
+			
+			        <EditText
+			            android:id="@+id/fromEditText"
+			            android:layout_width="match_parent"
+			            android:layout_height="@dimen/edittext_length"
+			            android:layout_weight="1"
+			            android:background="@drawable/search_box_selector"
+			            android:lines="1"
+			            android:maxLines="1"
+			            android:hint="@string/city_or_location"
+			            android:paddingLeft="15dp"
+			            android:inputType="text"
+			            android:nextFocusDown="@+id/toEditText" >
+
+			        </EditText>
+			    </LinearLayout>
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:background="@color/background_alt_color"
+			        android:layout_marginBottom="@dimen/edittext_margin" >
+			
+			        <TextView
+			            android:id="@+id/toText"
+			            android:layout_width="150dp"
+			            android:layout_height="match_parent"
+			            android:layout_weight="1"
+			            android:textColor="@color/edittext_alt_color"
+			            android:textSize="@dimen/page_text_size"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="10dp"
+			            android:text="@string/to_text" />
+			
+			        <EditText
+			            android:id="@+id/toEditText"
+			            android:layout_width="match_parent"
+			            android:layout_height="@dimen/edittext_length"
+			            android:layout_weight="1"
+			            android:background="@drawable/search_box_selector"
+			            android:lines="1"
+			            android:maxLines="1"
+			            android:hint="@string/city_or_location"
+			            android:paddingLeft="15dp"
+			            android:inputType="text"
+			            android:nextFocusDown="@+id/dateEditText" />
+
+			    </LinearLayout>
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:layout_marginBottom="@dimen/edittext_margin"
+			        android:background="@color/background_alt_color" >
+			
+			        <TextView
+			            android:id="@+id/date_text_view"
+			            android:layout_width="250dp"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:textColor="@color/edittext_alt_color"
+			            android:gravity="center_vertical"
+			            android:paddingLeft="10dp"
+			            android:text="@string/date_text" />
+			
+			        <EditText
+			            android:id="@+id/dateEditText"
+			            android:layout_width="match_parent"
+			            android:layout_height="@dimen/edittext_length"
+			            android:layout_weight="1"
+			            android:paddingLeft="10dp"
+			            android:background="@drawable/search_box_selector"
+			            android:drawableLeft="@drawable/ic_action_go_to_today"
+			            android:ems="10"
+			            android:maxLength="10"
+			            android:hint="@string/date_format_edittext"
+			            android:onClick="onDateEditClick"
+			            android:inputType="date"
+			            android:nextFocusDown="@+id/checkbox_non_stop" />
+			    </LinearLayout>
+
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginBottom="@dimen/edittext_margin" >
+
+			        <TextView
+			            android:id="@+id/num_seat_textview"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_gravity="center_vertical"
+			            android:layout_weight="1"
+			            android:paddingLeft="10dp"
+			            android:text="@string/num_person"
+			            android:textAppearance="?android:attr/textAppearanceSmall" />
+			        
+			        <LinearLayout
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1" >
+				        
+			        <EditText
+			            android:id="@+id/num_seat_edittext"
+			            android:layout_width="72dp"
+			            android:layout_height="72dp"
+			            android:background="@drawable/search_box_selector"
+			            android:ems="10"
+			            android:gravity="center"
+			            android:inputType="number"
+			            android:clickable="false" 
+			            android:cursorVisible="false" 
+			            android:focusable="false" 
+			            android:focusableInTouchMode="false"
+			            android:maxLength="2"
+			            android:text="@string/num_box" />
+
+			        <LinearLayout
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:orientation="vertical" >
+			            
+			            <Button
+				            android:id="@+id/plus_button"
+				            android:layout_width="72dp"
+				            android:layout_height="36dp"
+				            android:gravity="center"
+				            android:background="@drawable/search_box_selector"
+				            android:text="@string/plus_box"
+				            android:onClick="onPlusClick"
+				            android:textSize="25sp" />
+			            
+			            <Button
+				            android:id="@+id/minus_button"
+				            android:layout_width="72dp"
+				            android:layout_height="36dp"
+				            android:gravity="center"
+				            android:background="@drawable/search_box_selector"
+				            android:text="@string/minus_box"
+				            android:onClick="onMinusClick"
+				            android:textSize="30sp" />
+			            
+			            </LinearLayout>
+			            
+			        </LinearLayout>
+
+			    </LinearLayout>
+			    
+			    <CheckBox
+			        android:id="@+id/checkbox_non_stop"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center_horizontal"
+			        android:onClick="onCheckboxClicked"
+			        android:textAppearance="?android:attr/textAppearanceSmall" 
+			        android:text="@string/flights_checkbox"
+			        android:layout_marginBottom="40dp"
+			        android:nextFocusDown="@+id/search_button" />
+			
+			    <Button
+			        android:id="@+id/search_button"
+			        android:layout_width="match_parent"
+			        android:layout_height="@dimen/edittext_length"
+			        android:layout_gravity="center"
+			        android:onClick="submitGetFlights"
+			        android:textColor="@color/white"
+			        android:background="@drawable/button_selector"
+			        android:text="@string/search_button"
+			        android:nextFocusDown="@+id/fromEdittext" />
+			    </LinearLayout>
+			    </ScrollView>
+
+		    
+		</RelativeLayout>
