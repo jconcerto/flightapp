@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flightapp.androidproject"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ClientOptions"
+            android:label="@string/title1" >
+        </activity>
+        <activity
+            android:name=".AdminOptions"
+            android:label="@string/title_activity_admin_options" >
+        </activity>
+        <activity
+            android:name=".Results"
+            android:label="@string/title_activity_results" >
+        </activity>
+        <activity
+            android:name=".UserInfoPage"
+            android:label="@string/title_activity_user_info_page" >
+        </activity>
+        <activity
+            android:name=".TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name=".NavDrawerActivity"
+            android:label="@string/title_activity_nav_drawer" >
+        </activity>
+        <activity
+            android:name=".NewUserActivity"
+            android:label="@string/title_activity_new_user" >
+        </activity>
+        <activity
+            android:name=".DisplayResultActivity"
+            android:label="@string/title_activity_display_result"
+            android:parentActivityName=".NavDrawerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.flightapp.androidproject.NavDrawerActivity" />
+        </activity>
+        <activity
+            android:name=".ViewBookings"
+            android:label="@string/title_activity_view_bookings" >
+        </activity>
+        <activity
+            android:name=".UpdateFlightActivity"
+            android:label="@string/title_activity_update_flight" >
+        </activity>
+    </application>
+
+</manifest>
